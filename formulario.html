@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Recebendo valor do input</title>
+    <link rel="stylesheet" type="text/css" href="formulario.css"> 
+
+    
+</head>
+<body>
+    
+    <form id="form">
+        <div><h1>Formulário Genérico</h1></div>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label>Nome:</label>
+                <input type="text" id="nomeInput">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+            <div class="campo">
+                <label>Sobrenome:</label>
+                <input type="text" id="SobrenomeInput">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+        </fieldset>
+        
+        <fieldset class="grupo">
+            <div class="campo">
+                <label>Email:</label>
+                <input type="email" id="emailInput">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+            <div class="campo">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf"  maxlength="14">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+            
+        </fieldset>
+        
+        <fieldset class="grupo">
+            <div class="campo">               
+                <label>Gênero:</label>
+                <select name="genero" id="genero">
+                    <option value=""></option>
+                    <option >masculino</option>
+                    <option>feminino</option>
+                </select>
+            </div>
+            <div class="campo">
+                <div >
+                <label>Data de Nascimento:</label>
+                <input type="date" id="dataNascimentoInput">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+            
+        </fieldset>
+        
+        <fieldset class="grupo">
+            <div class="campo">
+                <label>Endereço:</label>
+                <input type="text" id="enderecoInput">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+            <div class="campo">
+                <label>Número de Telefone:</label>
+                <input type="text" id="telefoneInput" maxlength="15">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+        </fieldset>
+        
+        <fieldset class="grupo">
+            <div class="campo">
+                <label>Profissão:</label>
+                <input type="text" id="profissaoInput">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+            <div class="campo">
+                <label>Informações adicionais:</label>
+                <textarea placeholder="Se você tiver algo a acrescentar, preencha aqui" id="informacaoAdicional"></textarea>
+            </div>           
+        </fieldset>
+        
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="estado">Estado:</label>
+                <select id="estado">
+                    <option></option>
+                </select>
+            </div>
+            <div class="campo">
+                <label>Cidade:</label>
+                <select  id="cidade">
+                    <option></option>
+                </select>
+            </div>
+        </fieldset>
+        
+        <fieldset class="grupo">
+            <div class="campo">
+                <label>Senha:</label>
+                <input type="password4" id="senhaInput">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+            <div class="campo">
+                <label>Confirmação de Senha:</label>
+                <input type="password" id="confirmaSenhaInput">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+        </fieldset >
+        
+        <div>
+            <input type="reset" class="limpar" value="limpar" />
+            <button type="submit" id="Enviar" class="Enviar" >Enviar</button>
+            <br>
+            <span id="senhaErro" style="color: red;"></span>
+            <br>
+        </div>
+        
+
+    </form>
+    <!--function mostrarNome() {
+            var nome = document.getElementById("nomeInput").value;
+            alert("Seu nome é: " + nome);
+        <button onclick="mostrarNome()">Mostrar Nome</button>-->
+    <script src="./main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f9e19193d6.js"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
