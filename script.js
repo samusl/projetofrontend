@@ -114,10 +114,10 @@ function checkInputs() {
     setSuccessFor(sobrenome);
   }
   if (emailValue === "") {
-    setErrorFor(sobrenome, "O Sobrenome é obrigatório.");
+    setErrorFor(email, "O email é obrigatório.");
     isValid = false;
   } else {
-    setSuccessFor(sobrenome);
+    setSuccessFor(email);
   }
   if (cpfValue === "") {
     setErrorFor(cpf, "O CPF é obrigatório.");
@@ -161,7 +161,11 @@ function checkInputs() {
   if (confirmacaoSenhaValue === "") {
     setErrorFor(confirmacaoSenha, "A Confirmação de Senha é obrigatório.");
     isValid = false;
-  } else {
+  } else if(confirmacaoSenhaValue !== senhaValue) {
+    setErrorFor(confirmacaoSenha, "as senhas não são iguais")
+    isValid = false;
+    alert("as senhas não são iguais");
+  }else{
     setSuccessFor(confirmacaoSenha);
   }
   return isValid;
@@ -210,4 +214,20 @@ function salvarFormulario() {
   localStorage.setItem("formularioData", JSON.stringify(formData));
 
   alert("Formulário salvo com sucesso no localStorage.");
+}
+
+
+document.getElementById("openPopup").addEventListener("click", function() {
+  document.querySelector(".background").style.display = "block";
+  document.querySelector(".popup").style.display = "block";
+});
+
+document.getElementById("closePopup").addEventListener("click", function() {
+  document.querySelector(".background").style.display = "none";
+  document.querySelector(".popup").style.display = "none";
+});
+
+function closeModal() {
+  document.querySelector(".background").style.display = "none";
+  document.querySelector(".popup").style.display = "none";
 }
